@@ -34,7 +34,7 @@ class chatgpt(APIView):
                 request.session["grading_history"] = history
                 request.session.modified = True
 
-                return Response({"response": code})
+                return Response({"response": reply})
             except Exception as e:
                 return Response({"error": str(e)}, status=500)
             
